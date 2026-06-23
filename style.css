@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: black;
+  color: white;
+}
+
+/* NAVBAR */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  z-index: 100;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+  font-size: 1.2rem;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 80px 60px 50px 60px;
+  gap: 40px;
+}
+
+
+#about {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+#name {
+  color: #00ffff;
+  transition: all 0.3s ease;
+}
+
+#name:hover {
+  color: #00ffff;
+  text-shadow: 0 0 3px #00ffff;
+  transform: scale(1.02);
+  display: inline-block;
+}
+
+#navbar-name{
+  color: #00ffff;
+  text-shadow: 0 0 3px #00ffff;
+  transform: scale(1.02);
+  display: inline-block;
+}
+
+.right {
+  flex: 0 0 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+  max-width: 40%;
+  padding-right: 20px;
+  padding-left: 60px;
+}
+
+#certificates-image{
+    max-width: 40px;
+}
+
+.left-in-projects {
+  flex: 1;
+  max-width: 40%;
+  padding-left: 300px;
+}
+
+.left-in-certificates{
+    flex: 1;
+  max-width: 40%;
+  padding: 300px;
+}
+#profile-picture {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 100px 20px 20px;
+  }
+
+  #profile-picture {
+    width: 220px;
+    height: 220px;
+  }
+}
