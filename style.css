@@ -26,10 +26,9 @@ body {
 
 @media (max-width: 768px) {
   #navbar ul {
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 15px;
-    font-size: 1rem;
+    gap: 10px;
+    padding: 12px;
+    font-size: 1.1rem;
   }
 }
 
@@ -61,6 +60,16 @@ img,
   padding: 80px 60px 50px 60px;
   gap: 40px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 15px 20px;
+    gap: 20px;
+  }
+}
+
 
 #name {
   color: #00ffff;
@@ -100,9 +109,23 @@ ul{
   font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .left,
+  .left-in-projects {
+    font-size: 1.3rem;
+  }
+}
+
 .heightNwidthForLinks{
     height: 40px;
     width: 40px;
+}
+
+@media (max-width: 768px) {
+  .heightNwidthForLinks {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 #profile-picture {
