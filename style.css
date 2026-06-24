@@ -16,13 +16,30 @@ body {
 
 #navbar ul {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 30px;
   list-style: none;
   padding: 30px;
   margin: 0;
   font-size: 1.2rem;
+}
 
+@media (max-width: 768px) {
+  #navbar ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+#navbar a {
+  transition: all 0.2s ease;
+}
+
+#navbar a:hover {
+  transform: scale(1.08);
+  display: inline-block;
 }
 
 a {
@@ -30,6 +47,11 @@ a {
   text-decoration: none;
 }
 
+a,
+img,
+#name {
+  transition: all 0.3s ease;
+}
 
 .container {
   display: flex;
@@ -38,12 +60,6 @@ a {
   min-height: 100vh;
   padding: 80px 60px 50px 60px;
   gap: 40px;
-}
-
-
-#about {
-  flex: 1;
-  font-size: 1.2rem;
 }
 
 #name {
@@ -65,6 +81,10 @@ a {
   display: inline-block;
 }
 
+ul{
+    list-style: none;
+    padding-left: 0;
+}
 .right {
   flex: 0 0 350px;
   display: flex;
@@ -72,28 +92,19 @@ a {
   align-items: center;
 }
 
-.left {
+.left,.left-in-projects {
   flex: 1;
   max-width: 40%;
   padding-right: 20px;
   padding-left: 60px;
+  font-size: 1.2rem;
 }
 
-#certificates-image{
-    max-width: 40px;
+.heightNwidthForLinks{
+    height: 40px;
+    width: 40px;
 }
 
-.left-in-projects {
-  flex: 1;
-  max-width: 40%;
-  padding-left: 300px;
-}
-
-.left-in-certificates{
-    flex: 1;
-  max-width: 40%;
-  padding: 300px;
-}
 #profile-picture {
   width: 320px;
   height: 320px;
@@ -101,12 +112,37 @@ a {
   object-fit: cover;
 }
 
+#certificate-image {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  #certificate-image {
+    margin: 10px auto;
+  }
+}
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     padding: 100px 20px 20px;
+  }
+
+  .right {
+    order: 1;
+  }
+
+  .left,
+  .left-in-projects {
+    order: 2;
+    max-width: 100%;
+    padding: 0;
+    font-size: 1.2rem;
   }
 
   #profile-picture {
